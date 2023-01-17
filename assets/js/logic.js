@@ -1,4 +1,4 @@
-//Variables referencing html elements
+
 let startScreen = document.getElementById("start-screen");
 let scores = document.querySelector("scores");
 let timer = document.getElementById("time");
@@ -12,19 +12,14 @@ let finalScoreSpan = document.getElementById("final-score");
 let submitButton = document.getElementById("submit");
 let initials = document.getElementById("initials");
 
-//Variables in global scope
 let questionsCounter = 0;
 let selectedAnswer;
 
-//Start button with a event listener attached
-//It starts the timer and activates the startGame function which displays the first question
 startButton.addEventListener("click", function () {
-    startTimer() //starts timer on button click
+    startTimer() 
     startGame()
 });
 
-//Timer function counts down from defined number
-//Ends game if timer runs down to 0
 let timerInterval;
 let secondsLeft = 100;
 timer.textContent = secondsLeft;
@@ -41,20 +36,11 @@ function startTimer() {
         
 };
 
-//Function starting the game containing other functions controlling the game
 function startGame() {
     firstQuestion();
     firstAnswers();
 };
 
-// Function displaying the first questions. 
-// First it hides the start page
-//Then it creates a div for question and answers
-//Then it sets the css properties of that div
-//Then it appends the new div to the doc body
-//Then it sets the question text to the text
-//Then it appends question text to the questions div
-//Then it adds 1 to the variable counting the questions
 function firstQuestion() {
     startScreen.style.display = "none";
     document.body.appendChild(questionsContainer);
@@ -65,13 +51,6 @@ function firstQuestion() {
     questionsCounter++
 };
 
-// Function to display the first set of answers
-// First it creates a div container for answers
-// It then uses a for loop to make buttons and assign them answers from the quizQuestions array
-// It then appends these buttons to answers container
-// It then adds eventListeners to button which check if the selected answer is correct
-// It then penalizes the player if it's not
-// It then proceeds to the next question 
 let answerButton;
 function firstAnswers() {
     answersContainer.style = "display: flex; flex-direction: column;";
@@ -93,15 +72,12 @@ function firstAnswers() {
     }
 }
 
-//This function replaces previous question text with next question text
 function nextQuestion() {
     questionText.textContent = quizQuestions[questionsCounter].question;
     questionsContainer.append(questionText);
     questionsCounter++
 }
 
-//This function replaces previous answers with next answers. 
-//If final question answered, it finishes the game.
 function nextAnswers() {
     answersContainer.innerHTML = '';
     questionsContainer.append(answersContainer);
@@ -129,11 +105,6 @@ function nextAnswers() {
     }
 }
 
-//Function finishing the game
-//It stops the timer and assigns its value to results variable
-//It displays game end screen with the result displayed
-//It takes user initials input and assigns it to variable alongside result
-// I then stories the result in local memory
 function gameOver() {
     clearInterval(timerInterval)
     let result = secondsLeft;
@@ -150,12 +121,10 @@ function gameOver() {
     })
 };
 
-// Function penalizing the player for wrong answer be removing seconds 
 function penalty() {
     secondsLeft = timer.textContent = secondsLeft - 10;
 };
 
-//Functions displaying and sounding feedback on answer submission
 function wrongFeedback() {
     feedback.classList.remove('hide');
     feedback.classList.add('wrapper')

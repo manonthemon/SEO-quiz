@@ -1,5 +1,4 @@
 
-//Variable holding an array of objects with answers and questions
 let quizQuestions = [
     {
         question: "1. What is the main goal of SEO?",
@@ -53,8 +52,6 @@ let quizQuestions = [
         ],
     },
 ]
-
-//Variables with correct answers
 
 let correctAnswer1 = "1. To increase website traffic"
 let correctAnswer2 = "1. Rich media optimization"
