@@ -34,12 +34,12 @@ let quizQuestions = [
   
 
     {
-        question: "4. How does user engagement impact SEO?",
+        question: "4. What is a longtail keyword",
         answers: [
-            "1. User engagement has no impact on SEO",
-            "2. High user engagement can improve SEO by decreasing bounce rate and increasing time on site",
-            "3. High user engagement can negatively impact SEO by decreasing bounce rate and increasing time on site",
-            "4. Low user engagement can improve SEO by decreasing bounce rate and increasing time on site"
+            "1. A keyword with more than 12 letters",
+            "2. A hyphenated keyword",
+            "3. A phrase containing over three words",
+            "4. A foreign-language keyword"
         ],
     },
 
@@ -59,5 +59,5 @@ let quizQuestions = [
 let correctAnswer1 = "1. To increase website traffic"
 let correctAnswer2 = "1. Rich media optimization"
 let correctAnswer3 = "3. To determine the relevance of a website to a search query"
-let correctAnswer4 = "3. High user engagement can improve SEO by decreasing bounce rate and increasing time on site"
+let correctAnswer4 = "3. A phrase containing over three words"
 let correctAnswer5 = "1. Keyword density"
