@@ -161,7 +161,7 @@ function wrongFeedback() {
     feedback.classList.add('wrapper')
     feedback.textContent = "Wrong answer!";
     document.body.appendChild(feedback);
-    let wrong = new Audio('./assets/sfx/incorrect.wav');
+    let wrong = new Audio('./assets/sfx/incorrect1.mp3');
     wrong.play();
     setTimeout(function () {
         feedback.classList.add('hide');
@@ -173,7 +173,7 @@ function rightFeedback() {
     feedback.classList.add('wrapper');
     feedback.textContent = "Correct answer!";
     document.body.appendChild(feedback);
-    let right = new Audio('./assets/sfx/correct.wav');
+    let right = new Audio('./assets/sfx/correct1.mp3');
     right.play();
     setTimeout(function () {
         feedback.classList.add('hide');

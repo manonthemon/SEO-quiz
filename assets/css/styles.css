@@ -74,8 +74,8 @@ li:nth-child(odd) {
   font-size: 120%;
   margin-top: 20px;
   padding-top: 10px;
-  color: gray;
-  border-top: 2px solid #ccc;
+  color: rgba(199,50,118,255);
+  border-top: 2px solid rgba(199,50,118,255)
 }
 
 .timer {
